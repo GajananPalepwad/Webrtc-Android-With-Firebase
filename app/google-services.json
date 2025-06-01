@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "237195339390",
+    "firebase_url": "https://wallsplash-bce7e-default-rtdb.firebaseio.com",
+    "project_id": "wallsplash-bce7e",
+    "storage_bucket": "wallsplash-bce7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237195339390:android:c10ba91359dd5fb2841a2f",
+        "android_client_info": {
+          "package_name": "com.gn4k.videocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237195339390-fmt3sjd3icaa3f924mj5vu21gj3331kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnUOQ5Vgdjb8r9c17mtLwdvq6qCYAgpxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237195339390-66urnjnhfmhk2663u2vt8a9s6c66iqsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237195339390:android:b8df8313d74434cb841a2f",
+        "android_client_info": {
+          "package_name": "com.gn4k.videocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237195339390-fmt3sjd3icaa3f924mj5vu21gj3331kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnUOQ5Vgdjb8r9c17mtLwdvq6qCYAgpxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237195339390-66urnjnhfmhk2663u2vt8a9s6c66iqsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237195339390:android:1101f1608b525480841a2f",
+        "android_client_info": {
+          "package_name": "com.gn4k.wallsplash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237195339390-80ge4hl2ug53nmj9p4qjk9850vc38jsp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gn4k.wallsplash",
+            "certificate_hash": "95252fa69fb617e9aa1fe23cd5799d4fac4efa25"
+          }
+        },
+        {
+          "client_id": "237195339390-fmt3sjd3icaa3f924mj5vu21gj3331kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnUOQ5Vgdjb8r9c17mtLwdvq6qCYAgpxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237195339390-66urnjnhfmhk2663u2vt8a9s6c66iqsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
