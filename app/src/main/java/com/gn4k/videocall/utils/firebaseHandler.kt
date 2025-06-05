@@ -78,9 +78,9 @@ class firebaseHandler {
                                         respond.finalCallAccepted(event);
                                     }
 
-//                                            callTypes.EndCall.name -> {
-//                                                respond.onCallCut(event);
-//                                            }
+                                    callTypes.EndCall.name -> {
+                                        respond.onCallCut(event);
+                                    }
 
                                     callTypes.Reject.name -> {
                                         respond.onCallRejected(event);

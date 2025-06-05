@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.gson.Gson
 import org.webrtc.IceCandidate
 import org.webrtc.SessionDescription
+import kotlin.system.exitProcess
 
 
 class VideoCallActivity : AppCompatActivity(), callHandler {
@@ -105,7 +106,8 @@ class VideoCallActivity : AppCompatActivity(), callHandler {
                 service.stopAudio()
             };
             service.stopSelf();
-            finish();
+                    finishAffinity()
+        exitProcess(0)
         }
 
     }
@@ -290,6 +292,9 @@ class VideoCallActivity : AppCompatActivity(), callHandler {
 
     override fun onBackPressed() {
         super.onBackPressed()
+        finishAffinity()
+        exitProcess(0)
+
     }
 
     override fun onCallReceived(message: callModel) {
@@ -327,6 +332,8 @@ class VideoCallActivity : AppCompatActivity(), callHandler {
         firebaseWebRTCHandler.endCall();
         firebaseHandler.changeMyStatus("Online");
         finish();
+                finishAffinity()
+        exitProcess(0)
 
     }
 
@@ -367,6 +374,8 @@ class VideoCallActivity : AppCompatActivity(), callHandler {
             service.stopAudio()
         };
         service.stopSelf();
+                finishAffinity()
+        exitProcess(0)
 
     }
 
@@ -377,6 +386,8 @@ class VideoCallActivity : AppCompatActivity(), callHandler {
             service.stopAudio()
         };
         service.stopSelf();
+                finishAffinity()
+        exitProcess(0)
 
 
     }
