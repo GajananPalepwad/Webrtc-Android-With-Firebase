@@ -13,7 +13,7 @@ import android.os.Build
 import android.preference.PreferenceManager
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import com.gn4k.videocall.ui.mainActivity
+import com.gn4k.videocall.ui.MainActivity
 import com.gn4k.videocall.utils.firebaseHandler
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -78,7 +78,7 @@ class firebasePushNotifications : FirebaseMessagingService() {
         message: String?
     ) {
         // Pass the intent to switch to the MainActivity
-        val intent = Intent(this, mainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         // Assign channel ID
         val channel_id = "notification_channel"
         // Here FLAG_ACTIVITY_CLEAR_TOP flag is set to clear

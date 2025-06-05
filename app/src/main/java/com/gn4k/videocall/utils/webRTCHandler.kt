@@ -3,14 +3,10 @@ package com.gn4k.videocall.utils
 import android.content.Context
 import android.content.Intent
 import android.media.projection.MediaProjection
-import android.os.Handler
-import android.provider.MediaStore.Video
 import android.util.DisplayMetrics
 import android.util.Log
-import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
-import com.gn4k.videocall.model.callModel
+import com.gn4k.videocall.models.callModel
 import com.google.gson.Gson
 import org.webrtc.AudioTrack
 import org.webrtc.Camera2Enumerator

@@ -2,37 +2,20 @@ package com.gn4k.videocall.utils
 
 import android.content.Context
 import android.content.Intent
-import android.media.projection.MediaProjection.Callback
-import android.provider.MediaStore.Images.Media
-import android.renderscript.Sampler.Value
 import android.util.Log
-import android.widget.Toast
-import com.gn4k.videocall.model.callModel
+import com.gn4k.videocall.models.callModel
 import com.gn4k.videocall.services.mainService
-import com.google.android.gms.tasks.Task
-import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 import com.google.gson.Gson
-import okhttp3.Call
-import okhttp3.MediaType
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody
-import okhttp3.Response
-import org.json.JSONObject
 import org.webrtc.DataChannel
-import org.webrtc.EglRenderer
 import org.webrtc.IceCandidate
 import org.webrtc.MediaStream
 import org.webrtc.PeerConnection
 import org.webrtc.RtpReceiver
 import org.webrtc.SurfaceViewRenderer
-import java.io.IOException
-import java.util.concurrent.Callable
 
 
 class firebaseHandler {

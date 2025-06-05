@@ -11,7 +11,7 @@ import android.util.Log
 import android.widget.Toast
 import com.gn4k.videocall.R
 import com.gn4k.videocall.databinding.ActivityLoginScreenBinding
-import com.gn4k.videocall.model.userModel
+import com.gn4k.videocall.models.userModel
 import com.gn4k.videocall.utils.firebaseHandler
 import com.gn4k.videocall.utils.helper
 import com.google.android.gms.tasks.OnCompleteListener
@@ -89,7 +89,7 @@ class LoginScreen : AppCompatActivity() {
                             editor.putString("userName", user!!.username)
                             editor.apply()
                             editor.commit()
-                            startActivity(Intent(this@LoginScreen, mainActivity::class.java))
+                            startActivity(Intent(this@LoginScreen, MainActivity::class.java))
                             finish()
                         }
                         else {

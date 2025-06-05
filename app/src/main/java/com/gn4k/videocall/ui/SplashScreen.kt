@@ -33,7 +33,7 @@ class SplashScreen : AppCompatActivity() {
             prefs = PreferenceManager.getDefaultSharedPreferences(this@SplashScreen)
             Log.d("logged", prefs.getBoolean("loggedStatus", false).toString())
             if (prefs.getBoolean("loggedStatus", false)) {
-                startActivity(Intent(this@SplashScreen, mainActivity::class.java))
+                startActivity(Intent(this@SplashScreen, MainActivity::class.java))
                 finish()
             } else {
                 startActivity(Intent(this@SplashScreen, LoginScreen::class.java))

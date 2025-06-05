@@ -1,4 +1,4 @@
-package com.gn4k.videocall.model
+package com.gn4k.videocall.models
 
 class userModel {
 
@@ -11,5 +11,7 @@ class userModel {
         this.email = email
         this.password = password
     }
+
+    constructor()
 
 }

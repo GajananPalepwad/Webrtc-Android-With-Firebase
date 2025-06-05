@@ -1,6 +1,6 @@
 package com.gn4k.videocall.utils
 
-import com.gn4k.videocall.model.callModel
+import com.gn4k.videocall.models.callModel
 
 enum class callTypes {
     StartedAudioCall,StartedVideoCall,Offer,FinalAnswer, Answer,Reject,ICECandidate,EndCall

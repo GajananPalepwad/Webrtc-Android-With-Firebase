@@ -8,7 +8,7 @@ import android.preference.PreferenceManager
 import android.view.View
 import com.gn4k.videocall.R
 import com.gn4k.videocall.databinding.ActivityReceiveCallScreenBinding
-import com.gn4k.videocall.model.callModel
+import com.gn4k.videocall.models.callModel
 import com.gn4k.videocall.services.mainService
 import com.gn4k.videocall.utils.callHandler
 import com.gn4k.videocall.utils.callTypes
@@ -19,7 +19,7 @@ import com.gn4k.videocall.utils.webRTCHandler
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class callScreen : AppCompatActivity(), callHandler {
+class ReceiveCallScreen : AppCompatActivity(), callHandler {
 
     private lateinit var binding: ActivityReceiveCallScreenBinding;
     private lateinit var userRef : DatabaseReference;
@@ -69,7 +69,7 @@ class callScreen : AppCompatActivity(), callHandler {
                     email, userName, email, null, "Picked"
                 )
             )
-            var intent = Intent(this@callScreen, VideoCallActivity::class.java)
+            var intent = Intent(this@ReceiveCallScreen, VideoCallActivity::class.java)
             intent.putExtra("userName", receiverName);
             intent.putExtra("userEmail",  receiverEmail);
             intent.putExtra("callType",  callType);

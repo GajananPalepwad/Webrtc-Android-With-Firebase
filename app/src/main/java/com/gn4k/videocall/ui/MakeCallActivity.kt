@@ -8,7 +8,7 @@ import android.preference.PreferenceManager
 import android.view.View
 import com.gn4k.videocall.R
 import com.gn4k.videocall.databinding.ActivityMakeCallBinding
-import com.gn4k.videocall.model.callModel
+import com.gn4k.videocall.models.callModel
 import com.gn4k.videocall.services.mainService
 import com.gn4k.videocall.utils.callHandler
 import com.gn4k.videocall.utils.firebaseHandler
@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.gson.Gson
 
-class makeCall : AppCompatActivity(), callHandler {
+class MakeCallActivity : AppCompatActivity(), callHandler {
 
     private lateinit var binding: ActivityMakeCallBinding;
     private lateinit var userRef : DatabaseReference;
@@ -102,7 +102,7 @@ class makeCall : AppCompatActivity(), callHandler {
     }
 
     override fun onCallAccepted(message: callModel) {
-        var intent = Intent(this@makeCall, VideoCallActivity::class.java)
+        var intent = Intent(this@MakeCallActivity, VideoCallActivity::class.java)
         intent.putExtra("userName", message.senderName);
         intent.putExtra("userEmail",message.senderEmail);
         intent.putExtra("callType",  callType);

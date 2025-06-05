@@ -51,10 +51,10 @@
             android:name=".ui.VideoCallActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.makeCall"
+            android:name=".ui.MakeCallActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.callScreen"
+            android:name=".ui.ReceiveCallScreen"
             android:exported="false" />
 
         <service
@@ -67,14 +67,14 @@
 
         <service
             android:name=".services.mainService"
-            android:foregroundServiceType="mediaProjection"
             android:enabled="true"
-            android:process="."
             android:exported="false"
+            android:foregroundServiceType="mediaProjection"
+            android:process="."
             android:stopWithTask="true" />
 
         <activity
-            android:name=".ui.mainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
             android:name=".ui.SignupScreen"

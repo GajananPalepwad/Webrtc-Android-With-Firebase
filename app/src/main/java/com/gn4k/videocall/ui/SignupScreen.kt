@@ -12,7 +12,7 @@ import com.gn4k.videocall.utils.helper
 import android.widget.Toast
 import com.gn4k.videocall.R
 import com.gn4k.videocall.databinding.ActivitySignupScreenBinding
-import com.gn4k.videocall.model.userModel
+import com.gn4k.videocall.models.userModel
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -86,7 +86,7 @@ class SignupScreen : AppCompatActivity() {
                         editor.apply()
                         editor.commit()
                         dialog.cancel();
-                        startActivity(Intent(this@SignupScreen, mainActivity::class.java))
+                        startActivity(Intent(this@SignupScreen, MainActivity::class.java))
                         finish()
                     }
 

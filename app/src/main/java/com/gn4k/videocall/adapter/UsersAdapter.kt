@@ -1,8 +1,6 @@
 package com.gn4k.videocall.adapter
 
 import android.content.Context
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gn4k.videocall.R
-import com.gn4k.videocall.model.userPublicModel
+import com.gn4k.videocall.models.userPublicModel
 
 class usersAdapter : RecyclerView.Adapter<usersAdapter.viewHolder> {
 

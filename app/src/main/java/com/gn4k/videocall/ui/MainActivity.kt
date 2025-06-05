@@ -16,9 +16,9 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gn4k.videocall.adapter.usersAdapter
-import com.gn4k.videocall.model.callModel
-import com.gn4k.videocall.model.isValid
-import com.gn4k.videocall.model.userPublicModel
+import com.gn4k.videocall.models.callModel
+import com.gn4k.videocall.models.isValid
+import com.gn4k.videocall.models.userPublicModel
 import com.gn4k.videocall.services.mainService
 import com.gn4k.videocall.services.mainServiceActions
 import com.gn4k.videocall.utils.callHandler
@@ -36,7 +36,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 
-class mainActivity : AppCompatActivity(), callHandler {
+class MainActivity : AppCompatActivity(), callHandler {
     lateinit var firebaseWebRTCHandler: firebaseWebRTCHandler;
     lateinit var rtcHandler: webRTCHandler;
     private lateinit var binding: ActivityMainBinding;
@@ -99,6 +99,8 @@ class mainActivity : AppCompatActivity(), callHandler {
         }
         return true
     }
+
+
     private fun loadData() {
          username = prefs!!.getString("userName","");
         email = prefs!!.getString("userEmail","");
@@ -155,7 +157,7 @@ class mainActivity : AppCompatActivity(), callHandler {
                 firebaseHandler.callUser(user)
 
 
-                var intent = Intent(this@mainActivity, makeCall::class.java)
+                var intent = Intent(this@MainActivity, MakeCallActivity::class.java)
                 intent.putExtra("userName", userList.get(position).username);
                 intent.putExtra("userEmail", userList.get(position).email);
                 intent.putExtra("callType", "video");
@@ -173,7 +175,7 @@ class mainActivity : AppCompatActivity(), callHandler {
 
                 firebaseHandler.callUser(user)
 
-                var intent = Intent(this@mainActivity, makeCall::class.java);
+                var intent = Intent(this@MainActivity, MakeCallActivity::class.java);
                 intent.putExtra("userName", userList.get(position).username);
                 intent.putExtra("userEmail", userList.get(position).email);
                 intent.putExtra("callType", "audio");
@@ -205,7 +207,7 @@ class mainActivity : AppCompatActivity(), callHandler {
                 )
             )
 
-            var intent = Intent(this@mainActivity, VideoCallActivity::class.java)
+            var intent = Intent(this@MainActivity, VideoCallActivity::class.java)
             intent.putExtra("userName", targetName);
             intent.putExtra("userEmail", target);
             startActivity(intent);
@@ -213,7 +215,7 @@ class mainActivity : AppCompatActivity(), callHandler {
 
         binding.logout.setOnClickListener {
 
-            AlertDialog.Builder(this@mainActivity)
+            AlertDialog.Builder(this@MainActivity)
                 .setTitle("Logout ?")
                 .setMessage("Are you sure, you want to log out ?")
                 .setPositiveButton("Yes", object : DialogInterface.OnClickListener {
@@ -221,7 +223,7 @@ class mainActivity : AppCompatActivity(), callHandler {
                         val editor: SharedPreferences.Editor = prefs!!.edit()
                         editor.clear()
                         editor.apply()
-                        startActivity(Intent(this@mainActivity, LoginScreen::class.java))
+                        startActivity(Intent(this@MainActivity, LoginScreen::class.java))
                         finish()
                     }
 
@@ -250,7 +252,7 @@ class mainActivity : AppCompatActivity(), callHandler {
     override fun onBackPressed() {
         super.onBackPressed()
 
-        val builder = AlertDialog.Builder(this@mainActivity)
+        val builder = AlertDialog.Builder(this@MainActivity)
 
         builder.setMessage("Do you want to exit?")
 
@@ -286,7 +288,7 @@ class mainActivity : AppCompatActivity(), callHandler {
 
         if(message.isValid() && !accepted) {
             accepted = true;
-            var intent = Intent(this@mainActivity, callScreen::class.java)
+            var intent = Intent(this@MainActivity, ReceiveCallScreen::class.java)
             intent.putExtra("userName", message.senderName);
             intent.putExtra("userEmail",message.senderEmail);
             if(message.callType.toString().lowercase().contains("video")) {

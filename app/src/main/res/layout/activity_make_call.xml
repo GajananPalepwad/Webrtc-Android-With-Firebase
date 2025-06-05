@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greenPrimary"
-    tools:context=".ui.makeCall">
+    tools:context=".ui.MakeCallActivity">
 
     <org.webrtc.SurfaceViewRenderer
         android:id="@+id/userCamera"

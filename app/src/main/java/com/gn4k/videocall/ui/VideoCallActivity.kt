@@ -20,8 +20,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.gn4k.videocall.R
 import com.gn4k.videocall.databinding.ActivityVideoCallBinding
-import com.gn4k.videocall.model.callModel
-import com.gn4k.videocall.model.isValid
+import com.gn4k.videocall.models.callModel
+import com.gn4k.videocall.models.isValid
 import com.gn4k.videocall.services.mainService
 import com.gn4k.videocall.services.mainServiceActions
 import com.gn4k.videocall.utils.callHandler
